@@ -1,0 +1,11 @@
+#file: noinspection YAMLSchemaValidation
+spring:
+  cloud:
+    consul:
+      enabled: true
+      host: localhost
+      port: 8500
+
+      discovery:
+        instanceId: ${spring.application.name}:${random.value}
+        enabled: true

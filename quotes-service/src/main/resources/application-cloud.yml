@@ -1,0 +1,17 @@
+spring:
+  config:
+    import: "consul:"
+  cloud:
+    bus:
+      enabled: true
+    consul:
+      host: localhost
+      port: 8500
+
+      discovery:
+        instanceId: ${spring.application.name}:${random.value}
+
+      config:
+        enabled: true
+        watch:
+          enabled: true

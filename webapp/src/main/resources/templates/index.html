@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Цитаты на день</title>
+    <script>
+        function outputQuote(json) {
+            const quoteContainer = document.getElementById('quoteContainer')
+            quoteContainer.innerHTML = `"${json.quote}"`
+        }
+
+        function loadQuote() {
+            fetch('/api/quote')
+                .then(response => response.json())
+                .then(json => outputQuote(json))
+        }
+
+
+    </script>
+</head>
+<body>
+
+<h1 th:text = "${pageTitle}">Заголовок страницы</h1>
+
+<div class = "quote" id = "quoteContainer">
+</div>
+<br/>
+<button type="button" onclick="loadQuote()">Загрузить цитату</button>
+</body>
+</html>

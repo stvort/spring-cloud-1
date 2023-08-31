@@ -1,0 +1,17 @@
+[
+    {
+            "key": "config/",
+            "flags": 0,
+            "value": ""
+    },
+    {
+            "key": "config/webapp/",
+            "flags": 0,
+            "value": ""
+    },
+    {
+            "key": "config/webapp/pageTitle",
+            "flags": 0,
+            "value": "Нихао"
+    }
+]

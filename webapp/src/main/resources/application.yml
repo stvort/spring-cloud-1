@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: quotes-web-app
+  profiles:
+    active: no-cloud, p1-rest-template
+    #active: no-cloud, p2-feign-balancer-service-discovery
+    #active: p2-feign-balancer-service-discovery, p3-config-server
+
+app:
+  pageTitle: "Цитата на день"
+
+
+
+

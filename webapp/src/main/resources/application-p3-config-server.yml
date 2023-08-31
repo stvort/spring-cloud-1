@@ -1,0 +1,23 @@
+spring:
+  config:
+    import: "consul:"
+  cloud:
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+
+    consul:
+      host: localhost
+      port: 8500
+
+      config:
+        enabled: true
+        watch:
+          enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
